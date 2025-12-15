@@ -67,12 +67,23 @@ header {
 .hero {
     background: linear-gradient(135deg, #1a4d7a 0%, #2d6a9f 100%);
     color: white;
-    padding: 120px 40px;
-    text-align: center;
+    padding: 80px 40px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.hero-content {
+    flex: 1;
+    min-width: 300px;
+    max-width: 550px;
+    text-align: left;
 }
 
 .hero-content h1 {
-    font-size: 48px;
+    font-size: 42px;
     font-weight: 700;
     margin-bottom: 20px;
     letter-spacing: -0.5px;
@@ -82,9 +93,6 @@ header {
     font-size: 20px;
     margin-bottom: 40px;
     opacity: 0.95;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .btn-primary {
@@ -102,6 +110,19 @@ header {
 .btn-primary:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.hero-image {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.3);
 }
 
 /* About Section */
@@ -147,7 +168,7 @@ header {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
     max-width: 1200px;
     margin: 0 auto;
@@ -234,6 +255,14 @@ footer p {
         flex-direction: column;
         gap: 15px;
         padding: 15px 20px;
+    }
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero-content {
+        text-align: center;
     }
 
     .hero-content h1 {
